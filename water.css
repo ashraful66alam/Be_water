@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Waterfall&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap');
+
+body{
+    min-height: 100vh;
+    /* font-family: 'Monoton', cursive; */
+    
+}
+
+#contain{
+    position: relative;
+}
+#I , #U {
+    position: absolute;
+    font-size: 10em;
+    /* font-weight: bolder; */
+    /* color: transparent; */
+    z-index: 1;
+    /* text-shadow: 3px 3px 3px #000000; */
+    text-shadow: 23px 21px 13px #000000;
+    color: rgba(252, 252, 252, 0.959);
+    font-family: 'waterfall', cursive;
+
+
+}
+@keyframes view_show {
+    0%{
+        /* color: red; */
+        opacity: 0;
+    }
+    100%{
+        /* color: black; */
+        opacity: 1;
+    }
+}
+
+#I{
+    /* color: rgba(247, 171, 31, 0.959); */
+    /* color: rgba(58, 57, 57, 0.959); */
+    top: 5%;
+    animation: view_show 3s linear 0s 1 ;
+
+}
+#U{
+    /* color: rgba(134, 21, 21, 0.959); */
+    bottom: 2%;
+    animation: view_show 3s linear 0s 1;
+
+
+}
+
+#waterfrontChi,#waterfrontEng{
+    position: absolute;
+    font-size: 12em;
+    color: transparent;
+    -webkit-text-stroke: .1rem rgb(243, 224, 224);
+    
+    z-index: 1;
+    text-shadow: 23px 21px 13px #000000;
+
+    /* font-family: 'Monoton', cursive; */
+
+}
+#waterfrontChi{
+    opacity: 0;
+    animation: step 16s linear 0s infinite;
+    font-family: 'Noto Sans TC', sans-serif;
+
+}
+#waterfrontEng{
+    opacity: 0;
+    animation: step2 16s linear 8s infinite;
+    font-family: 'Monoton', cursive;
+
+
+}
+#waterbackChi,#waterbackEng{
+    position: absolute;
+    font-size: 12em;
+    /* font-weight: bolder; */
+    z-index: 1;
+    /* left: 5%; */
+    color: transparent;
+    /* background: -webkit-linear-gradient( rgb(177, 2, 2), rgb(218, 189, 31) ); */
+    background-image: linear-gradient(to right, rgb(67, 92, 173) 30%, rgb(238, 238, 230) 60%, rgb(34, 32, 32) 90%);
+    -webkit-background-clip: text;
+
+
+}
+
+#waterbackChi{
+    animation: water-flow1 4s ease-in-out 0s infinite, step 16s linear 0s infinite;
+    opacity: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+
+
+}
+#waterbackEng{
+
+    animation: water-flow1 4s ease-in-out 0s infinite, step2 16s linear 8s infinite;
+    opacity: 0;
+    font-family: 'Monoton', cursive;
+
+
+
+}
+
+@keyframes water-flow1 {
+    50%{
+        clip-path: polygon(0% 70%, 9% 59%, 25% 56%, 36% 56%, 40% 59%, 50% 62%, 58% 63%, 71% 58%, 75% 53%, 92% 49%, 99% 43%, 98% 95%, 100% 100%, 0% 99%);
+    }
+    0%,100%{
+        clip-path: polygon(0% 70%, 8% 70%, 21% 66%, 33% 67%, 41% 74%, 49% 79%, 59% 75%, 71% 70%, 79% 65%, 92% 63%, 100% 67%, 98% 95%, 100% 100%, 0% 99%);
+
+    }
+
+}
+@keyframes step{
+    30%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+@keyframes step2{
+    30%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
